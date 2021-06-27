@@ -83,9 +83,18 @@ def addOwnCrossHair():
         ('All Types *.*', '*.*')
     )
     f = fd.askopenfile(filetypes=filetype)
-    nombre_fich = f.name.split('/')
-    print(nombre_fich[len(nombre_fich)-1])
-    shutil.copy(f.name, xero_dir)
+    if(f != None):
+        nombre_fich = f.name.split('/')
+        print('Nom Fich: ', nombre_fich[len(nombre_fich)-1])
+        os.chdir('crosshairs')
+        xero_dir = os.getcwd()
+        shutil.copy(f.name, xero_dir)
+        os.chdir('../')
+        xero_dir = os.getcwd()
+        refreshCrossHairs()
+        status_lb.configure(text='Status: Crosshair added!', fg='green')
+    else:
+        status_lb.configure(text='Status: No crosshair selected!', fg='red')
 
 
 #Comprobaciones
