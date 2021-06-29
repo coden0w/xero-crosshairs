@@ -11,8 +11,8 @@
 	<crosshair id="2000030" path="melee.dds"/> <!-- Iron Boots -->
 	<crosshair id="2000036" path="melee.dds"/> <!-- Metallic Fist -->
 	<crosshair id="2000063" path="melee.dds"/> <!-- Vital Shock -->
-	<crosshair id="2010000" path="smg_2dot_75fov.png"/> <!-- Submachine Gun smg_2dot_75fov -->
-	<crosshair id="2010002" path="revo_2dot_75fov.png"/> <!-- Revolver revo_75fov  revo_2dot_75fov-->
+	<crosshair id="2010000" path="cross.dds"/> <!-- Submachine Gun -->
+	<crosshair id="2010002" path="cross.dds"/> <!-- Revolver -->
 	<crosshair id="2010004"> <!-- Semi Rifle -->
 		<primary path="cross.dds"/>
 		<secondary path="zoom.dds"/>
@@ -32,7 +32,7 @@
 	<crosshair id="2060002" path="circle.dds"/> <!-- Mind Shock -->
 	<crosshair id="2020002" path="cross.dds"/> <!-- Gauss Rifle -->
 	<crosshair id="2040003" path="stationary.dds"/> <!-- Senti Nell -->
-	<crosshair id="2010006" path="smash_2dot_75fov.png"/> <!-- Smash Rifle cross smash_2dot_75fov  smash_75fov-->
+	<crosshair id="2010006" path="cross.dds"/> <!-- Smash Rifle -->
 	<crosshair id="2010007" path="cross.dds"/> <!-- Handgun -->
 	<crosshair id="2010008" path="cross.dds"/> <!-- Shotgun -->
 	<crosshair id="2010016" path="circle.dds"/> <!-- Air Gun -->
