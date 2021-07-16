@@ -1,11 +1,11 @@
 import tkinter as tk
 from tkinter import *
+from tkinter import messagebox
 from tkinter import ttk
 from tkinter import filedialog as fd
 import os
 from xml.dom import minidom
 import shutil
-import json
 
 
 xero_dir = os.getcwd()
@@ -59,7 +59,7 @@ app_alto = 350
 root = Tk()
 root.config(bg='white')
 root.resizable(False, False)
-root.title('Xero - Crosshairs Changer GUI')
+root.title('Xero - Crosshairs Changer GUI v1.4')
 
 #centrar aplicacion en el centro de la pantalla
 monitor_ancho = root.winfo_screenwidth()
@@ -256,6 +256,9 @@ def xero_profile(event):
 #Comprobaciones
 status = checkXeroFolder()
 
+def saludo():
+    messagebox.showinfo(message="Thanks for using,\nWanheda sends you greetings!", title="What's Up!")
+
 if(status):    
     combo_armas['values'] = listWeapons()
     combo_armas['state'] = 'readonly'
@@ -287,6 +290,6 @@ if(status):
     btn_own_corsshair.place(x=405, y=235)
     btn_own_corsshair.bind('<Button-1>', lambda event: addOwnCrossHair())
 
-
+root.after(300, saludo)
 root.mainloop()
 

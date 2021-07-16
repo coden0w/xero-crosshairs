@@ -1,6 +1,6 @@
 <?xml version="1.0" ?><crosshairs>
 	<crosshair id="2000001" path="melee.dds"/> <!-- Plasma Sword -->
-	<crosshair id="2000002" path="melee.dds"/> <!-- Counter Sword -->
+	<crosshair id="2000002" path="1dot.png"/> <!-- Counter Sword -->
 	<crosshair id="2000003" path="melee.dds"/> <!-- Storm Bat -->
 	<crosshair id="2000006" path="melee.dds"/> <!-- Spy Dagger -->
 	<crosshair id="2000010" path="melee.dds"/> <!-- Twin Blades -->
