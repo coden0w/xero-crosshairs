@@ -1,0 +1,42 @@
+weapons = {
+    "Plasma Sword":"2000001",
+    "Counter Sword":"2000002",
+    "Storm Bat":"2000003",
+    "Spy Dagger":"2000006",
+    "Twin Blades":"2000010",
+    "Breaker":"2000013",
+    "Sigma Blade":"2000017",
+    "Katana":"2000018",
+    "Exo Scythe":"2000029",
+    "Iron Boots":"2000030",
+    "Metallic Fist":"2000036",
+    "Vital Shock":"2000063",
+    "Submachine Gun":"2010000",
+    "Revolver":"2010002",
+    "Semi Rifle":"2010004",
+    "Heavy Machine Gun":"2020001",
+    "Rail Gun":"2030001",
+    "Cannonade":"2030002",
+    "Sentry Gun":"2040001",
+    "Mine Gun":"2050001",
+    "Mind Energy":"2060001",
+    "Mind Shock":"2060002",
+    "Gauss Rifle":"2020002",
+    "Senti Nell":"2040003",
+    "Smash Rifle":"2010006",
+    "Handgun":"2010007",
+    "Burst Shotgun":"2010008",
+    "Air Gun":"2010016",
+    "Shockwave Gun":"2010019",
+    "Lightmachine Gun":"2020007",
+    "Spark Rifle":"2010018",
+    "Assault Rifle":"2010024",
+    "Rescue Gun":"2050004",
+    "Sharpshooter":"2030006",
+    "Dual Magnum":"2010028",
+    "Turret":"2020005"
+}
+
+
+for key, value in sorted(weapons.items()):
+    print(f' "{key}":"{value}",')

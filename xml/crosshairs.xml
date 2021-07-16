@@ -4,11 +4,11 @@
 	<crosshair id="2000003" path="melee.dds"/> <!-- Storm Bat -->
 	<crosshair id="2000006" path="melee.dds"/> <!-- Spy Dagger -->
 	<crosshair id="2000010" path="melee.dds"/> <!-- Twin Blades -->
-	<crosshair id="2000013" path="melee.dds"/> <!-- Breaker -->
+	<crosshair id="2000013" path="1dot.png"/> <!-- Breaker -->
 	<crosshair id="2000017" path="melee.dds"/> <!-- Sigma Blade -->
 	<crosshair id="2000018" path="melee.dds"/> <!-- Katana -->
 	<crosshair id="2000029" path="melee.dds"/> <!-- Exo Scythe -->
-	<crosshair id="2000030" path="melee.dds"/> <!-- Iron Boots -->
+	<crosshair id="2000030" path="circle2.dds"/> <!-- Iron Boots -->
 	<crosshair id="2000036" path="melee.dds"/> <!-- Metallic Fist -->
 	<crosshair id="2000063" path="melee.dds"/> <!-- Vital Shock -->
 	<crosshair id="2010000" path="cross.dds"/> <!-- Submachine Gun -->
