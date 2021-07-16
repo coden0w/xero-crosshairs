@@ -9,7 +9,8 @@ import json
 
 
 xero_dir = os.getcwd()
-print(xero_dir)
+#print(xero_dir)
+
 weapons = {
     "Air Gun":"2010016",
     "Assault Rifle":"2010024",
@@ -84,6 +85,7 @@ check_primary = ttk.Checkbutton(root, text='Primary (Normal)', variable=primary,
 check_primary['state'] = 'disabled'
 check_secondary = ttk.Checkbutton(root, text='Secondary (Zoom)', variable=secondary, onvalue=1, offvalue=0)
 check_secondary['state'] = 'disabled'
+
 
 btn_set_crosshair = ttk.Button(root, text='Set CrossHair', width=18)
 btn_own_corsshair = ttk.Button(root, text='Add Own CrossHair', width=18)
@@ -218,14 +220,14 @@ def setCrossHair():
                     cross.setAttribute('path', crosshair_selected)
                     status_lb.configure(text='Status: The crosshair has been changed!', fg='green')
             else:
+
                 status_lb.configure(text='Status: The crosshair has been changed!', fg='green')
         else:
             status_lb.configure(text='Status: Check that you have selected weapon and crosshair!', fg='orange')
 
     with open('xml/crosshairs.xml', 'w') as fich:
         xmldoc.writexml(fich)
-
-
+    
 
 
 def addOwnCrossHair():
@@ -274,6 +276,7 @@ if(status):
 
     check_primary.place(x=15, y=230)
     check_secondary.place(x=15, y=255)
+
 
     btn_refresh.place(x=405, y=295)
     btn_refresh.bind('<Button-1>', lambda event: restoreCrossHairs())

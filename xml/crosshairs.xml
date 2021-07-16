@@ -23,8 +23,8 @@
 		<secondary path="zoom.dds"/>
 	</crosshair>
 	<crosshair id="2030002"> <!-- Cannonade -->
-		<primary path="circle3.dds"/>
-		<secondary path="zoom1.dds"/>
+		<primary path="1dot.png"/>
+		<secondary path="1dot.png"/>
 	</crosshair>
 	<crosshair id="2040001" path="stationary.dds"/> <!-- Sentry Gun -->
 	<crosshair id="2050001" path="projectile.dds"/> <!-- Mine Gun -->
@@ -35,7 +35,7 @@
 	<crosshair id="2010006" path="cross.dds"/> <!-- Smash Rifle -->
 	<crosshair id="2010007" path="cross.dds"/> <!-- Handgun -->
 	<crosshair id="2010008" path="cross.dds"/> <!-- Shotgun -->
-	<crosshair id="2010016" path="circle.dds"/> <!-- Air Gun -->
+	<crosshair id="2010016" path="1dot.png"/> <!-- Air Gun -->
 	<crosshair id="2010015" path="circle1.dds"/> <!-- Homing Rifle -->
 	<crosshair id="2051337" path="circle.dds"/> <!-- Air Gun -->
 	<crosshair id="2010019" path="circle1.dds"/> <!-- Shockwave Gun -->
