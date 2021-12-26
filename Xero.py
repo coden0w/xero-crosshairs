@@ -1,52 +1,53 @@
 import tkinter as tk
 from tkinter import *
+from tkinter import messagebox
 from tkinter import ttk
 from tkinter import filedialog as fd
 import os
 from xml.dom import minidom
 import shutil
-import json
 
 
 xero_dir = os.getcwd()
-print(xero_dir)
+#print(xero_dir)
+
 weapons = {
-    "Plasma Sword":"2000001",
-    "Counter Sword":"2000002",
-    "Storm Bat":"2000003",
-    "Spy Dagger":"2000006",
-    "Twin Blades":"2000010",
+    "Air Gun":"2010016",
+    "Assault Rifle":"2010024",
     "Breaker":"2000013",
-    "Sigma Blade":"2000017",
-    "Katana":"2000018",
-    "Exo Scythe":"2000029",
-    "Iron Boots":"2000030",
-    "Metallic Fist":"2000036",
-    "Vital Shock":"2000063",
-    "Submachine Gun":"2010000",
-    "Revolver":"2010002",
-    "Semi Rifle":"2010004",
-    "Heavy Machine Gun":"2020001",
-    "Rail Gun":"2030001",
+    "Burst Shotgun":"2010008",
     "Cannonade":"2030002",
-    "Sentry Gun":"2040001",
-    "Mine Gun":"2050001",
+    "Counter Sword":"2000002",
+    "Dual Magnum":"2010028",
+    "Exo Scythe":"2000029",
+    "Gauss Rifle":"2020002",
+    "Handgun":"2010007",
+    "Heavy Machine Gun":"2020001",      
+    "Iron Boots":"2000030",
+    "Katana":"2000018",
+    "Lightmachine Gun":"2020007",       
+    "Metallic Fist":"2000036",
     "Mind Energy":"2060001",
     "Mind Shock":"2060002",
-    "Gauss Rifle":"2020002",
-    "Senti Nell":"2040003",
-    "Smash Rifle":"2010006",
-    "Handgun":"2010007",
-    "Burst Shotgun":"2010008",
-    "Air Gun":"2010016",
-    "Shockwave Gun":"2010019",
-    "Lightmachine Gun":"2020007",
-    "Spark Rifle":"2010018",
-    "Assault Rifle":"2010024",
+    "Mine Gun":"2050001",
+    "Plasma Sword":"2000001",
+    "Rail Gun":"2030001",
     "Rescue Gun":"2050004",
+    "Revolver":"2010002",
+    "Semi Rifle":"2010004",
+    "Senti Nell":"2040003",
+    "Sentry Gun":"2040001",
     "Sharpshooter":"2030006",
-    "Dual Magnum":"2010028",
-    "Turret":"2020005"
+    "Shockwave Gun":"2010019",
+    "Sigma Blade":"2000017",
+    "Smash Rifle":"2010006",
+    "Spark Rifle":"2010018",
+    "Spy Dagger":"2000006",
+    "Storm Bat":"2000003",
+    "Submachine Gun":"2010000",
+    "Turret":"2020005",
+    "Twin Blades":"2000010",
+    "Vital Shock":"2000063"
 }
 
 
@@ -58,7 +59,7 @@ app_alto = 350
 root = Tk()
 root.config(bg='white')
 root.resizable(False, False)
-root.title('Xero - Crosshairs Changer GUI')
+root.title('Xero - Crosshairs Changer GUI v1.4')
 
 #centrar aplicacion en el centro de la pantalla
 monitor_ancho = root.winfo_screenwidth()
@@ -84,6 +85,7 @@ check_primary = ttk.Checkbutton(root, text='Primary (Normal)', variable=primary,
 check_primary['state'] = 'disabled'
 check_secondary = ttk.Checkbutton(root, text='Secondary (Zoom)', variable=secondary, onvalue=1, offvalue=0)
 check_secondary['state'] = 'disabled'
+
 
 btn_set_crosshair = ttk.Button(root, text='Set CrossHair', width=18)
 btn_own_corsshair = ttk.Button(root, text='Add Own CrossHair', width=18)
@@ -218,14 +220,14 @@ def setCrossHair():
                     cross.setAttribute('path', crosshair_selected)
                     status_lb.configure(text='Status: The crosshair has been changed!', fg='green')
             else:
+
                 status_lb.configure(text='Status: The crosshair has been changed!', fg='green')
         else:
             status_lb.configure(text='Status: Check that you have selected weapon and crosshair!', fg='orange')
 
     with open('xml/crosshairs.xml', 'w') as fich:
         xmldoc.writexml(fich)
-
-
+    
 
 
 def addOwnCrossHair():
@@ -254,6 +256,9 @@ def xero_profile(event):
 #Comprobaciones
 status = checkXeroFolder()
 
+def saludo():
+    messagebox.showinfo(message="Thanks for using,\nWanheda sends you greetings!", title="What's Up!")
+
 if(status):    
     combo_armas['values'] = listWeapons()
     combo_armas['state'] = 'readonly'
@@ -275,6 +280,7 @@ if(status):
     check_primary.place(x=15, y=230)
     check_secondary.place(x=15, y=255)
 
+
     btn_refresh.place(x=405, y=295)
     btn_refresh.bind('<Button-1>', lambda event: restoreCrossHairs())
 
@@ -284,6 +290,6 @@ if(status):
     btn_own_corsshair.place(x=405, y=235)
     btn_own_corsshair.bind('<Button-1>', lambda event: addOwnCrossHair())
 
-
+root.after(300, saludo)
 root.mainloop()
 
